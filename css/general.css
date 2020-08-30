@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body > * {
+    padding: 0 15%;
+    font-family: "微软雅黑", sans-serif;
+}
+
+h4 {
+    margin-bottom: 15px;
+    font-weight: normal;
+}
+
+h4::before {
+    content: '|';
+    color: rgb(190, 3, 5);
+    font-weight: bolder; /*换成红色竖线图片*/
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+header .search-box {
+    width: 205px;
+    height: 34px;
+    border: 1px solid rgb(159, 159, 159);
+}
+
+header .search-box .search-text {
+    display: block;
+    float: left;
+    box-sizing: border-box;
+    width: 172px;
+    height: 30px;
+    padding: 2px 0 2px 3px;
+    border: none;
+    color: #ccc;
+}
+
+header .search-box .search-button {
+    display: block;
+    float: right;
+    width: 28px;
+    height: 34px;
+    margin-top: 3px;
+    background: url(../img/search.png) no-repeat;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar {
+    background-color: rgb(191, 5, 6);
+}
+
+.navbar ul {
+    width: 100%;
+}
+
+.navbar ul li {
+    list-style-type: none;
+    vertical-align: middle;
+    font-size: 1em;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar ul li:hover {
+    background-color: rgb(125, 1, 1);
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 0;
+        text-align: left;
+    }
+
+    .navbar ul li {
+        padding: 2px 0 2px 5px;
+    }
+}
+
+@media (min-width: 768px) {
+    .navbar {
+        padding: 0 15%;
+        text-align: center;
+    }
+
+    .navbar ul {
+        display: table;
+        table-layout: fixed;
+        margin: 0;
+    }
+
+    .navbar ul li {
+        display: table-cell;
+        padding: 2px;
+    }
+}
+
+#scroll {
+    padding: 0;
+    margin: 0;
+}
+
+.carousel .carousel-inner img {
+    width: 100%;
+    height: 100%;
+}
+
+.big-division, .products, .questions {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.news .news-picture {
+    position: relative;
+}
+
+.news .news-picture img {
+    width: 100%;
+    height: 248px;
+}
+
+/*.news .news-picture .news-picture-caption{*/
+/*    position: absolute;*/
+/*    bottom: 0;*/
+/*    width: 90%;*/
+/*    margin: 0;*/
+/*    color: white;*/
+/*    background-color: black;*/
+/*}*/
+
+.news .news-list ul li {
+    display: block;
+    position: relative;
+    width: 99%;
+    height: auto;
+    line-height: 30px;
+    border-bottom: 1px #ccc dashed;
+    list-style: none;
+    font-size: 15px;
+}
+
+.news .news-list ul li .news-item {
+    text-decoration: none;
+    color: #676767;
+}
+
+.news .news-list ul li .news-item:hover {
+    color: rgb(194, 10, 10);
+}
+
+.news .news-list ul li .news-date {
+    float: right;
+    color: #A5A5A5;
+}
+
+.events ul li {
+    display: block;
+    position: relative;
+    width: 99%;
+    height: 49px;
+    margin: 4px 0;
+    list-style: none;
+}
+
+.events ul li .event-date {
+    float: left;
+    width: 55px;
+    height: 100%;
+    text-align: center;
+    color: white;
+}
+
+.events ul li .event-date .dd {
+    font-size: 25px;
+    line-height: 30px;
+    background-color: rgb(191, 5, 6);
+}
+
+.events ul li .event-date .yymm {
+    font-size: 13px;
+    line-height: 16px;
+    background-color: rgb(205, 55, 66);
+}
+
+.events ul li a {
+    display: block;
+    margin: 0;
+    padding-left: 60px;
+}
+
+.events ul li .event-title {
+    color: #676767;
+}
+
+.events ul li .event-content {
+    color: #A5A5A5;
+}
+
+.products {
+    background-color: rgb(247, 244, 246);
+}
+
+.questions form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    border: none;
+}
+
+.questions form fieldset * {
+    flex-grow: 1;
+    padding-left: 5px;
+    margin: 7px;
+    border: 2px solid rgb(159, 159, 159);
+    font-size: 1em;
+}
+
+.questions form fieldset input {
+    height: 35px;
+}
+
+.questions form fieldset textarea {
+    width: 100%;
+}
+
+.questions form .button-area {
+    display: flex;
+    justify-content: center;
+}
+
+.questions form .button-area input {
+    width: 15%;
+    padding: 5px 0;
+    margin: 10px 5%;
+    font-size: 15px;
+}
+
+.questions form .button-area input[type="submit"] {
+    color: white;
+    background-color: rgb(191, 5, 6);
+    border: none;
+}
+
+.questions form .button-area input[type="submit"]:hover {
+    background-color: rgb(125, 1, 1)
+}
+
+.questions form .button-area input[type="reset"] {
+    background-color: white;
+    border: 2px solid black;
+}
+
+.questions form .button-area input[type="reset"]:hover {
+    color: white;
+    background-color: black;
+}
+
+.links {
+    background-color: rgb(191, 5, 6);
+}
+
+.links > * {
+    display: inline-block;
+    margin: 0;
+    color: white;
+    font-size: 1.2em;
+}
+
+.links ul {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links ul li {
+    flex-direction: row;
+    list-style-type: none;
+    padding: 5px;
+}
+
+.links ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.links ul li a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    padding-top: 1em;
+    padding-bottom: 1em;
+    color: white;
+    background-color: rgb(71, 71, 71);
+}
