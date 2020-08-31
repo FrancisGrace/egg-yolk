@@ -212,6 +212,55 @@ header .search-box .search-button {
     background-color: rgb(247, 244, 246);
 }
 
+/* List style */
+.products ul.thumbnails {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.products ul.thumbnails li {
+    padding: 0 5px;
+}
+
+.products .thumbContent {
+    text-align: center;
+    padding-top: 25%;
+}
+
+.products .thumbOverlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    width: calc(100% - 10px);
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.products ul.thumbnails h4 {
+    color: white;
+}
+
+.products ul.thumbnails img {
+    width: 100% !important;
+    margin: 0;
+}
+
+.products ul.thumbnails p {
+    color: #999;
+}
+
+.products .thumbnail {
+    border: 0;
+    margin: 0;
+    width: 100% !important;
+}
+
+.products .carousel-control-prev, .products .carousel-control-next {
+    width: 7%;
+}
+
 .questions form fieldset {
     display: flex;
     flex-wrap: wrap;
