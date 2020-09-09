@@ -1,3 +1,5 @@
+/*整体*/
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +9,8 @@ body > * {
     padding: 0 15%;
     font-family: "微软雅黑", sans-serif;
 }
+
+/*标题*/
 
 h4 {
     margin-bottom: 15px;
@@ -19,6 +23,8 @@ h4::before {
     font-weight: bolder; /*换成红色竖线图片*/
 }
 
+/*页眉*/
+
 header {
     display: flex;
     justify-content: space-between;
@@ -27,13 +33,15 @@ header {
     padding-bottom: 5px;
 }
 
-header .search-box {
+/*搜索框*/
+
+.search-box {
     width: 205px;
     height: 34px;
-    border: 1px solid rgb(159, 159, 159);
+    border: 1px solid #777;
 }
 
-header .search-box .search-text {
+.search-text {
     display: block;
     float: left;
     box-sizing: border-box;
@@ -41,10 +49,10 @@ header .search-box .search-text {
     height: 30px;
     padding: 2px 0 2px 3px;
     border: none;
-    color: #ccc;
+    color: #888;
 }
 
-header .search-box .search-button {
+.search-button {
     display: block;
     float: right;
     width: 28px;
@@ -55,28 +63,32 @@ header .search-box .search-button {
     cursor: pointer;
 }
 
+/*导航栏*/
+
 .navbar {
     background-color: rgb(191, 5, 6);
 }
 
-.navbar ul {
+.navbar-nav {
     width: 100%;
 }
 
-.navbar ul li {
+.nav-item {
     list-style-type: none;
     vertical-align: middle;
     font-size: 1em;
 }
 
-.navbar ul li a {
+.nav-item a {
     color: white;
     text-decoration: none;
 }
 
-.navbar ul li:hover {
+.nav-item:hover {
     background-color: rgb(125, 1, 1);
 }
+
+/*导航栏（移动设备）*/
 
 @media (max-width: 768px) {
     .navbar {
@@ -84,10 +96,12 @@ header .search-box .search-button {
         text-align: left;
     }
 
-    .navbar ul li {
+    .nav-item {
         padding: 2px 0 2px 5px;
     }
 }
+
+/*导航栏（电脑）*/
 
 @media (min-width: 768px) {
     .navbar {
@@ -95,17 +109,19 @@ header .search-box .search-button {
         text-align: center;
     }
 
-    .navbar ul {
+    .navbar-nav {
         display: table;
         table-layout: fixed;
         margin: 0;
     }
 
-    .navbar ul li {
+    .nav-item {
         display: table-cell;
         padding: 2px;
     }
 }
+
+/*轮播图*/
 
 #scroll {
     padding: 0;
@@ -117,16 +133,20 @@ header .search-box .search-button {
     height: 100%;
 }
 
+/*三个板块*/
+
 .big-division, .products, .questions {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 1em 15%;
+    margin: 0;
 }
 
-.news .news-picture {
+/*新闻资讯*/
+
+.news-picture {
     position: relative;
 }
 
-.news .news-picture img {
+.news-picture img {
     width: 100%;
     height: 248px;
 }
@@ -140,7 +160,7 @@ header .search-box .search-button {
 /*    background-color: black;*/
 /*}*/
 
-.news .news-list ul li {
+.news-list li {
     display: block;
     position: relative;
     width: 99%;
@@ -151,19 +171,21 @@ header .search-box .search-button {
     font-size: 15px;
 }
 
-.news .news-list ul li .news-item {
+.news-item {
     text-decoration: none;
     color: #676767;
 }
 
-.news .news-list ul li .news-item:hover {
+.news-item:hover {
     color: rgb(194, 10, 10);
 }
 
-.news .news-list ul li .news-date {
+.news-date {
     float: right;
     color: #A5A5A5;
 }
+
+/*企业动态*/
 
 .events ul li {
     display: block;
@@ -174,7 +196,7 @@ header .search-box .search-button {
     list-style: none;
 }
 
-.events ul li .event-date {
+.event-date {
     float: left;
     width: 55px;
     height: 100%;
@@ -182,31 +204,33 @@ header .search-box .search-button {
     color: white;
 }
 
-.events ul li .event-date .dd {
+.event-date .dd {
     font-size: 25px;
     line-height: 30px;
     background-color: rgb(191, 5, 6);
 }
 
-.events ul li .event-date .yymm {
+.event-date .yymm {
     font-size: 13px;
     line-height: 16px;
     background-color: rgb(205, 55, 66);
 }
 
-.events ul li a {
+.events a {
     display: block;
     margin: 0;
     padding-left: 60px;
 }
 
-.events ul li .event-title {
+.event-title, .event-title:hover {
     color: #676767;
 }
 
-.events ul li .event-content {
+.event-content, .event-content:hover {
     color: #A5A5A5;
 }
+
+/*产品展示*/
 
 .products {
     background-color: rgb(247, 244, 246);
@@ -220,7 +244,7 @@ header .search-box .search-button {
 }
 
 .products ul.thumbnails li {
-    padding: 0 5px;
+    padding: 5px;
 }
 
 .products .thumbContent {
@@ -231,10 +255,10 @@ header .search-box .search-button {
 .products .thumbOverlay {
     display: none;
     position: absolute;
-    top: 0;
+    top: 5px;
     left: 5px;
     width: calc(100% - 10px);
-    height: 100%;
+    height: calc(100% - 10px);
     background: rgba(0, 0, 0, 0.7);
 }
 
@@ -261,59 +285,60 @@ header .search-box .search-button {
     width: 7%;
 }
 
-.questions form fieldset {
+/*问题咨询*/
+
+.questions fieldset {
     display: flex;
     flex-wrap: wrap;
     border: none;
 }
 
-.questions form fieldset * {
+.questions fieldset * {
     flex-grow: 1;
     padding-left: 5px;
-    margin: 7px;
+    margin: 4px;
     border: 2px solid rgb(159, 159, 159);
     font-size: 1em;
+    line-height: 2em;
 }
 
-.questions form fieldset input {
-    height: 35px;
-}
-
-.questions form fieldset textarea {
+.questions textarea {
     width: 100%;
 }
 
-.questions form .button-area {
+.button-area {
     display: flex;
     justify-content: center;
 }
 
-.questions form .button-area input {
-    width: 15%;
+.button-area input {
+    width: 150px;
     padding: 5px 0;
-    margin: 10px 5%;
+    margin: 4px 5%;
     font-size: 15px;
 }
 
-.questions form .button-area input[type="submit"] {
+.button-area input[type="submit"] {
     color: white;
     background-color: rgb(191, 5, 6);
     border: none;
 }
 
-.questions form .button-area input[type="submit"]:hover {
+.button-area input[type="submit"]:hover {
     background-color: rgb(125, 1, 1)
 }
 
-.questions form .button-area input[type="reset"] {
+.button-area input[type="reset"] {
     background-color: white;
     border: 2px solid black;
 }
 
-.questions form .button-area input[type="reset"]:hover {
+.button-area input[type="reset"]:hover {
     color: white;
     background-color: black;
 }
+
+/*友情链接*/
 
 .links {
     background-color: rgb(191, 5, 6);
@@ -328,28 +353,27 @@ header .search-box .search-button {
 
 .links ul {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
-.links ul li {
+.links li {
     flex-direction: row;
     list-style-type: none;
     padding: 5px;
 }
 
-.links ul li a {
+.links a {
     color: white;
     text-decoration: none;
 }
 
-.links ul li a:hover {
+.links a:hover {
     text-decoration: underline;
 }
 
 footer {
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding: 1em 15%;
     color: white;
     background-color: rgb(71, 71, 71);
 }
